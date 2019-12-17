@@ -19,7 +19,7 @@ def get_params_by_path(param_path: str, *, path_sep: str = '/') -> Mapping[str, 
         logger.warning('No parameters found for path [%s]', param_path)
         return {}
     return {
-        param['Name'].rsplit(path_sep, maxsplit=1): param['Value']
+        param['Name'].rsplit(path_sep, maxsplit=1)[-1]: param['Value']
         for param in params['Parameters']
     }
 
