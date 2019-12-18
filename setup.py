@@ -7,26 +7,26 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='ssm-env-exec',
-    version='0.0.1',
+    name='ssmenv2exec',
+    version='0.0.3',
     description='Pass AWS SSM parameters as environment variables when executing a process',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/jowage58/ssm-env-exec/',
+    url='https://github.com/jowage58/ssmenv2exec/',
     author='John Wagenleitner',
     author_email='johnwa@mail.fresnostate.edu',
     keywords='aws ssm paraemters environment',
     py_modules=['ssmenv2exec'],
     python_requires='>=3.6, <4',
-    install_requires=['boto3'],
+    install_requires=['boto3>=1.5'],
     entry_points={
         'console_scripts': [
             'ssmenv2exec=ssmenv2exec:main',
         ],
     },
     project_urls={
-        'Bug Reports': 'https://github.com/jowage58/ssm-env-exec/issues',
-        'Source': 'https://github.com/jowage58/ssm-env-exec/',
+        'Bug Reports': 'https://github.com/jowage58/ssmenv2exec/issues',
+        'Source': 'https://github.com/jowage58/ssmenv2exec/',
     },
     classifiers=[
         'Development Status :: 3 - Alpha',

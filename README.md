@@ -8,7 +8,7 @@ the EC2 instance or Docker container.
 
 # Usage
 
-    pip install -e .
+    pip install ssmenv2exec
 
 Now you can use the `ssmenv2exec` script from the command line to execute your process
 and have the environment populated from an AWS SSM Parameter store path.
