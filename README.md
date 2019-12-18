@@ -11,7 +11,7 @@ the EC2 instance or Docker container.
     pip install -e .
 
 You can now use the `ssmenv2exec` script from the command line to execute your process
-and have it environment built from an AWS SSM Parameter store path.
+and have the environment populated from an AWS SSM Parameter store path.
 
 For example, in parameter store you can create parameters using a common path.
 
@@ -22,12 +22,11 @@ For example, in parameter store you can create parameters using a common path.
 
 Then you can use `ssmenv2exec` to execute your program and the initial environment
 will contain values for `DB_USER`, `DB_PASS`, `DB_URL` and `SECRET_KEY`. If any of
-those already exist as environment variables they will not be override from the
-parameter store.
+those already exist as environment variables they will not be overridden.
 
     ssmenv2exec /app/myapp python app.py
 
-The `ssmenv2exec` will grab all parameters from the Parameter Store under the
-`/app/myapp` path and pass those as environment variables to the program. The
-`exec` call is made so the process id remains consistent, which is useful for
-containerized environments.
+`ssmenv2exec` will grab all parameters from the Parameter Store under the
+`/app/myapp` path and pass those as environment variables to the process. An
+`exec` call is used so that the process id (pid) remains consistent, which is
+useful for containerized environments.
