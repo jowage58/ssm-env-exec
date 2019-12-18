@@ -16,7 +16,7 @@ setup(
     author='John Wagenleitner',
     author_email='johnwa@mail.fresnostate.edu',
     keywords='aws ssm paraemters environment',
-    packages=find_packages(),
+    py_modules=['ssmenv2exec'],
     python_requires='>=3.6, <4',
     install_requires=['boto3'],
     entry_points={

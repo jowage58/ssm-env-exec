@@ -32,7 +32,8 @@ def get_params_by_path(param_path: str, *, path_sep: str = '/') -> Mapping[str, 
 def main() -> None:
     if len(sys.argv) < 3:
         print('Usage:')
-        print('\tssmenv2env /app/cas/ java -jar some.jar\n')
+        print('\tssmenv2env /app/cas/ java -jar some.jar')
+        print('\tssmenv2env /app/foo python run.py\n')
         sys.exit(1)
 
     env = os.environ
