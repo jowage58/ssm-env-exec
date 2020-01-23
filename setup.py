@@ -8,7 +8,7 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='ssmenv2exec',
-    version='0.0.3',
+    version='0.0.1',
     description='Pass AWS SSM parameters as environment variables when executing a process',
     long_description=long_description,
     long_description_content_type='text/markdown',
